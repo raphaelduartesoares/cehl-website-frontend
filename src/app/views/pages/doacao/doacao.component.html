@@ -1,0 +1,56 @@
+<div style="min-height: 100vh">
+    <div class="container container-short">
+        <main class="mb-5">
+            <div class="py-4 text-center">
+                <img class="d-block mx-auto mb-4" src="../../../../assets/images/logo-coracao-transparente.png" alt="" width="96" />
+                <h3 class="fw-bold mb-3">Use o QR Code do Pix para pagar</h3>
+                <p class="">Abra o app do banco em que vai fazer a transferência, escaneie a imagem abaixo ou cole o código do QR Code</p>
+                <div class="border border-2 border-primary rounded-2 mx-auto mb-4" style="width: 180px; height: 180px; padding: 1px">
+                    <img src="../../../../assets/images/doacao-pix-qrcode.png" width="100%" alt="" />
+                </div>
+                <div class="d-grid gap-2">
+                    <button type="button" class="btn btn-primary py-3 fw-bold fs-6" style="letter-spacing: 1px" (click)="onCopyQRCode()">
+                        Copiar código do QR Code
+                        <i class="fa-regular fa-copy fa-lg ms-2"></i>
+                    </button>
+                </div>
+            </div>
+            <div>
+                <div class="text-center">
+                    <p class="lead">Ou use a chave Pix</p>
+                </div>
+                <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    data-bs-title="Tooltip on top"
+                >
+                    Tooltip on top
+                </button>
+
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <span class="fw-bold">Chave PIX</span>
+                        <span class="text-primary" role="button" (click)="onCopyCNPJ()"
+                            >CNPJ<i class="fa-regular fa-copy fa-lg ms-2"></i
+                        ></span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <span class="fw-bold">Nome</span>
+                        <span class="">Centro Espírita Hermelinda Lopes</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <span class="fw-bold">Banco</span>
+                        <span class="">290 - PAGSEGURO INTERNET IP S.A.</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <span class="fw-bold">Identificador</span>
+                        <span class="">DoacaoPIXQRCode</span>
+                    </li>
+                </ul>
+            </div>
+        </main>
+        <app-footer></app-footer>
+    </div>
+</div>
