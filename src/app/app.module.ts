@@ -8,10 +8,9 @@ import { AppComponent } from "./app.component";
 import { FooterComponent } from "./views/components/footer/footer.component";
 import { DoacaoComponent } from "./views/pages/doacao/doacao.component";
 import { LinksComponent } from "./views/pages/links/links.component";
-import { MessagesComponent } from './views/pages/messages/messages.component';
 
 @NgModule({
-    declarations: [AppComponent, LinksComponent, DoacaoComponent, FooterComponent, MessagesComponent],
+    declarations: [AppComponent, LinksComponent, DoacaoComponent, FooterComponent],
     imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, NgxNotifierModule],
     providers: [],
     bootstrap: [AppComponent],
