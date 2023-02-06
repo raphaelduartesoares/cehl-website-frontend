@@ -19,7 +19,7 @@
             <div class="text-center">
                 <div>
                     <a [href]="urlCalendarEvents" class="btn btn-primary px-4 py-2 mb-4 rounded-pill" type="button">
-                        Adicionar eventos na minha agenda
+                        Inscrever-se na agenda
                     </a>
                 </div>
                 <!-- <iframe
@@ -29,12 +29,25 @@
                     style="width: 100%; max-width: 992px; height: 100vh; max-height: 800px; border: none"
                     data-cy="calendar-embed-iframe"
                 ></iframe> -->
-                <iframe
+                <!-- <iframe
                     src="https://calendar.google.com/calendar/embed?src=ffe2f7f4cd54afaeb8863335953386a081d430d13b595bd79150504ed831f2a1%40group.calendar.google.com&ctz=America%2FRecife"
                     title="Styled Calendar"
                     class="styled-calendar-container"
                     style="width: 100%; max-width: 992px; height: 100vh; max-height: 800px; border: none"
+                ></iframe> -->
+
+                <iframe
+                    *ngIf="innerWidth <= SMALL_SCREEN_BREAKPOINT"
+                    src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FRecife&mode=AGENDA&showPrint=0&showDate=1&showTitle=0&src=ZmZlMmY3ZjRjZDU0YWZhZWI4ODYzMzM1OTUzMzg2YTA4MWQ0MzBkMTNiNTk1YmQ3OTE1MDUwNGVkODMxZjJhMUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%234285F4"
+                    style="width: 100%; max-width: 992px; height: 100vh; max-height: 800px; border: none"
                 ></iframe>
+
+                <iframe
+                    *ngIf="innerWidth > SMALL_SCREEN_BREAKPOINT"
+                    src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FRecife&showPrint=0&mode=MONTH&showTabs=1&src=ZmZlMmY3ZjRjZDU0YWZhZWI4ODYzMzM1OTUzMzg2YTA4MWQ0MzBkMTNiNTk1YmQ3OTE1MDUwNGVkODMxZjJhMUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%234285F4"
+                    style="width: 100%; max-width: 992px; height: 100vh; max-height: 800px; border: none"
+                ></iframe>
+
                 <!-- <script async type="module" src="https://embed.styledcalendar.com/assets/parent-window.js"></script> -->
             </div>
         </main>
